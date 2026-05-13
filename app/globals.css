@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #b4916a;
+  --color-gold-hover: #c9a67e;
+  --color-dark-bg: #0a0a0c;
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-slate-200 font-sans;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-[10px] border border-white/10;
+  }
+  
+  .ataturk-bubble {
+    background: linear-gradient(135deg, #1e1e24 0%, #16161a 100%);
+    border-left: 3px solid #b4916a;
+  }
+
+  .chat-gradient {
+    background: linear-gradient(180deg, rgba(15,15,18,0) 0%, rgba(15,15,18,1) 100%);
+  }
+}
+
+.markdown-body {
+  @apply leading-relaxed;
+}
+
+.markdown-body p {
+  @apply mb-4 transform-gpu;
+}
+
+.markdown-body strong {
+  @apply font-bold text-gold;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.markdown-body italic {
+  @apply italic;
+}
